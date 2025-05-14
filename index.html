@@ -4,59 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BrightCode - Soluções Digitais</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header {
-      margin-bottom: 30px;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #1a73e8;
-    }
-    p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-    a.botao {
-      display: inline-block;
-      background: #1a73e8;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1em;
-      transition: background 0.3s;
-    }
-    a.botao:hover {
-      background: #0f5ddc;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="toggle-tema" title="Alternar tema">🌓</button>
+
   <header>
     <h1>BrightCode</h1>
     <p>Transformamos ideias em soluções digitais. Sistemas personalizados, automações e tecnologia acessível para o seu negócio.</p>
-    <a class="botao" href="https://seulink.hotmart.com" target="_blank">Acessar Produto</a>
+    
+    <div class="botoes">
+      <a class="botao" href="https://hotmart.com/pt-br/marketplace/produtos/seu-produto" target="_blank">Ver Produto</a>
+      <a class="botao" href="https://pay.hotmart.com/X99728001G" target="_blank">Fazer Pagamento</a>
+    </div>
   </header>
-  
+
+  <section class="sistema">
+  <h2>Cash Control</h2>
+  <p>O Cash Control é um sistema de controle financeiro simples e eficiente. Com ele, você acompanha saldos, contas a pagar, assinaturas e exporta relatórios com facilidade.</p>
+  </section>
+
+
+  <section class="galeria">
+    <img src="Screenshot_1.png" alt="Imagem do sistema 1" onclick="abrirModal(this.src)">
+    <img src="Screenshot_2.png" alt="Imagem do sistema 2" onclick="abrirModal(this.src)">
+    <img src="Screenshot_3.png" alt="Imagem do sistema 3" onclick="abrirModal(this.src)">
+  </section>
+
+
+
+  <section class="contato">
+    <h2>Fale com a gente</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div id="modal" onclick="fecharModal()">
+    <span>&times;</span>
+    <img id="modal-img" src="">
+  </div>
+
   <footer>
-    &copy; 2025 BrightCode. Todos os direitos reservados.
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
+    </div>
+    <p>&copy; 2025 BrightCode. Todos os direitos reservados.</p>
   </footer>
+
+  <a href="https://wa.me/SEUNUMERO" class="whatsapp" target="_blank">📱</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
